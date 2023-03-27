@@ -1,29 +1,33 @@
-import PropsTypes from 'prop-types';
+import PropTypes from 'prop-types';
+import getRandomColor from 'utils/getRandomColor';
 import css from './Statistics.module.css';
 
-export function Statistics(props) { 
-    return (
-        <section Name="statistics">
-            <h2 Name="title">Upload stats</h2>
 
-            <ul Name="stat-list">
-                <li Name="item">
-                    <span Name="label">.docx</span>
-                    <span Name="percentage">4%</span>
+export const Statistics = ({ title, stats }) => (
+    <section className={css.statistics}>
+        {title && <h2 className={css.title}>{title}</h2>}
+        <ul className={css.statlist}>
+            {stats.map(({ id, label, percentage }) => (
+                <li
+                    style={{ backgroundColor: getRandomColor() }}
+                    className={css.item}
+                    key={id}
+                >
+                    <span className={css.label}>{label}</span>
+                    <span className={css.percentage}>{percentage}%</span>
                 </li>
-                <li Name="item">
-                    <span Name="label">.mp3</span>
-                    <span Name="percentage">14%</span>
-                </li>
-                <li Name="item">
-                    <span Name="label">.pdf</span>
-                    <span Name="percentage">41%</span>
-                </li>
-                <li Name="item">
-                    <span Name="label">.mp4</span>
-                    <span Name="percentage">12%</span>
-                </li>
-            </ul>
-        </section>
-    );
+            ))}
+        </ul>
+    </section>
+);
+
+Statistics.propTypes = {
+    title: PropTypes.string,
+    stats: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string,
+            label: PropTypes.string,
+            percentage: PropTypes.number,
+        })
+    ),
 };

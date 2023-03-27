@@ -9,6 +9,7 @@ export const Profiler = styled.div`
   border: 2px solid green;
   border-radius: 8px;
   margin: 30px;
+  background-color: aliceblue;
 `;
 
 export const Description = styled.div`
@@ -53,7 +54,7 @@ export const Stats = styled.ul`
   padding: 10px;
   gap: 10px;
   border: 1px black;
-
+  border-radius: 0 0 8px 8px;
   overflow: hidden;
   background-color: lightgray;
 `;
