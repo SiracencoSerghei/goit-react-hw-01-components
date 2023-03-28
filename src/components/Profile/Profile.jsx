@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { Profiler, Avatar, Name, Tag, Location, Description, Label, Quantity, Stats, Stat } from './Profile.styled';
 
 export default function Profile({ username, tag, location, avatar, stats }) {        
-    console.log({ username, tag, location, avatar, stats });
+    // console.log({ username, tag, location, avatar, stats });
     return (
         <Profiler>
             <Description>
