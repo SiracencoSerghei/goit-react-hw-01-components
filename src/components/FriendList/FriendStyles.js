@@ -31,4 +31,5 @@ export const Avatar = styled.img`
   margin-right: 10px;
   background-color: ${props => (props.isOnline ? 'green' : 'red')};
   border-radius: 50%;
+  
 `;
