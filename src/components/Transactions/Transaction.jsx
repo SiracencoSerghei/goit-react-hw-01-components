@@ -12,7 +12,11 @@ const TransactionHistory = ({items}) => {
             </tr>
         </thead>
         <tbody className={css.tbody}>
-            {items.map(({ id, type, amount, currency }, index) => {
+            {items
+                .sort((a, b) => a.type < b.type ? -1 : a.type > b.type ? 1 : 0)
+                // .sort((a, b) => a.amount - b.amount) або 
+                // .sort((a, b) => a.currency < b.currency ? -1 : a.currency > b.currency ? 1 : 0)
+                .map(({ id, type, amount, currency }, index) => {
                 return (
                     <tr key={id} style={{ backgroundColor: index % 2 === 0 ? 'white' : 'aliceblue' }} >
                     <td>{type}</td>
