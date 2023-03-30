@@ -2,11 +2,11 @@ import React from 'react';
 import Profile from "./Profile/Profile";
 import { Statistics } from "./Statistics/Statistics";
 import FriendsList from './FriendList/FriendsList';
-import TransactionHistory from './Transactions/Transaction';
+// import TransactionHistory from './Transactions/Transaction';
 import user from './Profile/user.json';
 import data from './Statistics/data.json';
 import friends from './FriendList/friends.json';
-import transactions from './Transactions/transactions.json';
+// import transactions from './Transactions/transactions.json';
 
 export const App = () => {
   return (
