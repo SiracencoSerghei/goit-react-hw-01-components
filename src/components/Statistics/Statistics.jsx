@@ -7,7 +7,9 @@ export const Statistics = ({ title, stats }) => (
     <section className={css.statistics}>
         {title && <h2 className={css.title}>{title}</h2>}
         <ul className={css.statlist}>
-            {stats.map(({ id, label, percentage }) => (
+            {stats
+                .sort((a, b) => a.percentage - b.percentage)
+                .map(({ id, label, percentage }) => (
                 <li
                     style={{ backgroundColor: getRandomColor() }}
                     className={css.item}

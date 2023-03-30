@@ -19,8 +19,8 @@ export const Description = styled.div`
 `;
 
 export const Avatar = styled.img`
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   overflow: hidden;
   margin-top: 10px;
@@ -51,8 +51,8 @@ export const Stats = styled.ul`
   justify-content: space-between;
   list-style: none;
   margin: 0;
-  padding: 10px;
-  gap: 10px;
+  padding: 0;
+  width: 100%;
   border: 1px black;
   border-radius: 0 0 8px 8px;
   overflow: hidden;
@@ -60,13 +60,13 @@ export const Stats = styled.ul`
 `;
 
 export const Stat = styled.li`
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   border: 1px solid;
-  margin: 10px;
   padding: 10px;
-  flex: grow;
 `;
 
 export const Label = styled.span`

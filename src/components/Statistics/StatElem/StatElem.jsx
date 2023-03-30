@@ -3,7 +3,7 @@ import getRandomColor from 'utils/getRandomColor';
 import css from './Statistics.module.css';
 
 const StatElem = (stats) => {
-    
+    return(
     stats.map(({ label, percentage, id }) => (
         <li
             style={{ backgroundColor: getRandomColor() }}
@@ -13,7 +13,7 @@ const StatElem = (stats) => {
             <span>{label}</span>
             <
 span>{percentage}%</span>
-        </li>))
+        </li>)))
 };
 
 StatElem.propTypes = {

@@ -1,48 +1,62 @@
 .statistics {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: aliceblue;
-    border: 1px solid green;
-    border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: aliceblue;
+  border: 1px solid green;
+  border-radius: 4px;
 }
 
 .title {
-    text-align: center;
-text-transform: uppercase;
-    margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .statlist {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    border-top: 1px solid green;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid green;
 }
 
 .item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    font-size: 34px;
-    width: 100px;
-    height: 100px;
-    /* color: #ffffff; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  font-size: 34px;
+  width: 100%;
+  max-width: 200px;
+  height: 100px;
+  color: #ffffff;
+  background-color: green;
+  margin-bottom: 20px;
 }
 
-
 .label {
-    font-weight: bold;
-    padding: 5px;
-    margin-bottom: 10px;
+  font-weight: bold;
+  padding: 5px;
+  margin-bottom: 10px;
 }
 
 .percentage {
-    font-size: 20px;
-    padding: 5px;
-    font-weight: bold;
+  font-size: 20px;
+  padding: 5px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .statlist {
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+  
+  .item {
+    max-width: none;
+    margin: 10px;
+  }
 }

@@ -6,7 +6,17 @@ import { FriendsList } from './FriendStyles';
 const Friends = ({ friends }) => {
     return (
         <FriendsList>
-            {friends.map(friend => (
+            {/* {friends
+                .filter(friend => friend.isOnline) // Фильтрация только друзей онлайн
+                .map(friend => <Friend key={friend.id} {...friend} />) // Отображение друзей онлайн
+            }
+            {friends
+                .filter(friend => !friend.isOnline) // Фильтрация друзей офлайн
+                .map(friend => <Friend key={friend.id} {...friend} />) // Отображение друзей офлайн
+            } */}
+            {friends
+                .sort((a, b) => (a.isOnline === b.isOnline ? 0 : a.isOnline ? -1 : 1)) // Сортировка друзей: сначала онлайн, затем остальные
+                .map(friend => (
                 <Friend key={friend.id} {...friend} />
             ))}
         </FriendsList>
