@@ -1,0 +1,23 @@
+.transactionHistory {
+  border: 1px solid black;
+  border-collapse: separate;
+  border-spacing: 10px;
+  margin: 50px;
+}
+
+.tbody,
+.thead {
+  padding: 20px;
+}
+.thead {
+  background: hsl(195, 93%, 33%);
+  color: white;
+}
+td,
+th {
+  width: 150px;
+  padding: 20px;
+  text-align: start;
+  border: 1px solid black;
+  padding: 10px;
+}
